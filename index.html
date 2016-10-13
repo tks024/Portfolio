@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>PortFolio</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" >
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+
+	<!-- jQuery -->
+    <script type='text/javascript' src='js/jquery-3.1.0.min.js'></script>
+	<script type='text/javascript' src='js/jquery-css-transform.js'></script>
+	<script type='text/javascript' src='js/jquery-animate-css-rotate-scale.js'></script>
+	<script type='text/javascript' src='js/jquery.easie.js'></script>
+	<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+	<script src="https://snapwidget.com/js/snapwidget.js"></script>
+	<script type='text/javascript' src='js/app.js'></script>
+
+    <!-- CSS -->
+	<link rel='stylesheet' type='text/css' href='css/html5reset-1.6.1.css' />
+	<link rel='stylesheet' type='text/css' href='style.css' />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		
+	</script>
+</head>
+
+<body class="top">
+	<header>
+		<a href="index.html" alt="logo">
+			<h1 class="header-logo"></h1>
+		</a>
+
+		<nav id="gloval-navigation">
+			<ul class="main-menue">
+				<li class="col_odd active"><a href="">TOP</a></li>
+				<li class="col_even"><a href="">ABOUT</a></li>
+				<li class="col_odd"><a href="">PORTFOLIO</a></li>
+				<li class="col_even"><a href="#">CONTACT</a></li>
+			</ul>
+
+			<ul class="sns-menue">
+				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+
+		<div id="mobile-navigation">
+			<a id="sidr-button" class="menue-button" href="#sidr-nav">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<script type="text/javascript">
+			$(function(){
+			    $('#sidr-button').sidr({
+			      name: 'sidr',
+			      source:"#gloval-navigation",
+			      renaming: false,
+			      side : 'right',
+			      speed:350
+			    });
+			});
+		</script>
+	</header>
+	
+	<div class="wrap">
+		<main>
+			<div class="main-container">
+				<div class="home-container cd-fixed-bg">
+					<h1>eTakashima</h1>
+				</div>
+
+				<div class="portfolio-container cd-scrolling-bg"> 
+					<h2>PortFolio</h2>
+					<p>いままでの作品をご紹介いたします。ご覧ください。</p>
+
+					<nav class="portfolio-navigation">
+						<ul class="portfolio-menue-name clearfix">
+							<li><a href="">Block</a></li>
+							<li><a href="">App</a></li>
+							<li><a href="">Illust</a></li>
+							<li><a href="">Photo</a></li>
+						</ul>
+
+						<ul class="portfolio-menue-icon clearfix">
+							<li id="panel-icon-01"><a href=""><img src="img/icn_01.png" alt=""></a></li>
+							<li id="panel-icon-02"><a href=""><img src="img/icn_02.png" alt=""></a></li>
+							<li id="panel-icon-03"><a href=""><img src="img/icn_03.png" alt=""></a></li>
+							<li id="panel-icon-04"><a href="f"><img src="img/icn_04.png" alt=""></a></li>
+						</ul>
+					</nav>
+
+					<div id="factory">
+						<div id="line_item"">
+							<img src='img/factory01.png' alt=''></img>
+						</div>
+					</div>
+
+					<script type="text/javascript">
+						/* パネルのアイコンを揺らす*/
+						$(function(){
+							var elements = ['#panel-icon-01 img','#panel-icon-02 img','#panel-icon-03 img','#panel-icon-04 img'];
+							func_animationSwing(elements);
+						});
+						/*ファクトリーラインアニメーション*/
+						$(function(){
+							func_inViewExec(".portfolio-container",func_animationFactory,func_animationFactoryStop,0);
+						});
+					</script>
+				</div>
+
+				<div class="video-container cd-fixed-bg">
+					<div class="pattern"></div>
+
+					<h2>Stop Animation Video</h2>
+
+					<p class="youtube-icon">
+						<a href="">
+							<i class="fa fa-youtube" aria-hidden="true"></i>
+						</a>
+					</p>
+
+					<div class="youtube">
+						<iframe src="https://www.youtube.com/embed/6KAeUFpVoLs?rel=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+
+				<div class="skill-container cd-scrolling-bg">
+					<div class="opacity-cover"></div>
+
+					<h2>Skill</h2>
+					
+					<div class="skill-box">
+						<p>Java/C#/VisualBasic/VB6/Swift/Objective-C<br>
+							HTML/CSS/JavaScript/PHP/WordPress<br>
+							PhotoShop/Illustrator/InDesign<br>
+						</p>
+					</div>
+
+					<script type="text/javascript">
+						/*フォールアニメーション*/
+						$(function(){
+							func_inViewExec(".skill-container",func_animationFall(".skill-container"),func_animationFallStop,0);
+						});
+					</script>
+				</div>
+
+				<div class="instgram-container cd-scrolling-bg">
+					<!-- <div> -->
+						<h2>InstGram</h2>
+						<!-- SnapWidget -->
+						<iframe src="https://snapwidget.com/embed/246520" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; ">
+							
+						</iframe>
+					<!-- </div> -->
+				</div>
+
+			</div>
+		</main>
+	</div>
+
+	<footer>
+		<h1 class="footer-logo"><img src="img/logo_foot.png" alt=""></h1>
+
+		<ul class="share-menue clearfix">
+			<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+		</ul>
+
+		<p class="rights-statement">
+			Copyright &copy; eTakashima all rights reserved.
+		</p>
+	</footer>
+
+</body>
+
+
+</html>
