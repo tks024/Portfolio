@@ -900,6 +900,138 @@ body.archive .page-index {
 
 /* -------------------------------------------------
 
+portfoliopage
+
+------------------------------------------------- */
+#portfolio-category {
+	position: fixed;
+	width: 195px;
+	z-index: 100;
+	padding-left: 30px;
+}
+
+#portfolio-category h4 {
+	font-family: 'Open Sans','Noto Sans Japanese', sans-serif;
+	font-weight:600;
+	font-size: 14px;
+	margin: 0 0 0 0;
+	padding: 3px 0;
+	color: #000;
+	background-color: #6089BF;
+}
+
+#portfolio-category ul {
+	list-style-type: none;
+}
+#portfolio-category ul li {
+	width: 100%;
+}
+
+#portfolio-category ul li a {
+	display:block;
+	height:50px;
+	width: 100%;
+	line-height: 50px;
+	text-align: left;
+	text-decoration:none;
+	font-family: 'Open Sans','Noto Sans Japanese', sans-serif;
+	font-size: 16px;
+	font-weight:300;
+	color: #000;
+	border-bottom:1px dotted #000;
+	background-color: #fff;
+}
+
+#portfolio-category ul li a:hover {
+	background-color:#EAF0F4;
+}
+
+
+.portfolio-archive-container {
+	padding-left: calc(30px + 195px + 15px) ;
+   	/*width : calc(100% - 30px - 195px - 15px - 15px) ;*/
+	/*background-color: #ccc;*/
+}
+
+.grid {
+	position: relative;
+}
+
+.grid_item {
+    margin-bottom: 46px;
+    display: block;
+}
+
+.grid_item_img {
+	position: relative;
+	display: block;
+	width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.grid_item_img a {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.grid_item_img img {
+	position: absolute;
+    display: block;
+	top: 0;
+	left: 0;
+    max-width: 100%;
+    width: 100%;
+	height: 100%;
+}
+
+.grid_column_sizer {
+	width: 90px;
+}
+.grid_gutter_sizer {
+	width: 46px;
+}
+.grid_item_1col {
+	width: 162px;
+}
+.grid_item_2col {
+	width: 226px;
+}
+.grid_item_3col {
+	width: 362px;
+}
+
+.grid_item_text {
+	visibility: hidden;
+	margin-top: 8px;
+	text-align: center;
+	color: #000;
+}
+
+.grid_item:hover .grid_item_text {
+	visibility: visible;
+}
+
+.grid_item_text > h2 {
+	font-family: 'Baloo Bhaina', cursive;
+	font-size:16px;
+	text-align: center;
+}
+
+.grid_item_text > h2 {
+	margin: 0;
+}
+
+
+
+
+/* -------------------------------------------------
+
 	Footer
 
 ------------------------------------------------- */

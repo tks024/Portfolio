@@ -19,6 +19,48 @@ function func_adjustHeight(element,ratio) {
 
 /* -------------------------------------------------
 
+func_adjustFixedElement--固定要素位置調整
+
+------------------------------------------------- */
+function func_adjustFixedElement(fixedElement,mainElement) {
+
+	var fix = $(fixedElement), 				//固定したいコンテンツ
+	main = $(mainElement), 					//固定する要素を収める範囲
+	fixTop = fix.offset().top,
+	mainTop = main.offset().top,
+	h_fixHeight = $('header').css('position') === 'fixed' ? $('header').height() : 0,
+	w = $(window);
+
+	// alert(h_fixHeight);
+	$(window).scroll(function(){
+		// alert("test");
+		var fixHeight = fix.outerHeight(true),
+		mainHeight = main.outerHeight(),
+		winTop = w.scrollTop();
+		if(winTop + fixHeight > mainTop + mainHeight - h_fixHeight){
+			fix.css({
+				position: 'absolute',
+				top: mainHeight - fixHeight + h_fixHeight
+			});
+			// alert("hit");
+		}else if(winTop >= fixTop - h_fixHeight){
+			fix.css({
+				 position: 'fixed',
+				 top: h_fixHeight
+		 });
+		 // alert("fixed");
+		}else{
+			fix.css({
+				 position: 'absolute',
+				 top: fixTop
+			 });
+				// alert("absolute");
+		}
+	});
+}
+
+/* -------------------------------------------------
+
 func_inViewExec--スクロールで表示された場合に実行
 
 ------------------------------------------------- */
