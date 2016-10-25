@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css" rel="stylesheet" >
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+
+	<!-- jQuery -->
+    <script type='text/javascript' src='js/jquery-3.1.0.min.js'></script>
+	<script type='text/javascript' src='js/jquery-css-transform.js'></script>
+	<script type='text/javascript' src='js/jquery-animate-css-rotate-scale.js'></script>
+	<script type='text/javascript' src='js/jquery.easie.js'></script>
+	<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
+	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
+	<script src="https://snapwidget.com/js/snapwidget.js"></script>
+	<script type='text/javascript' src='js/app.js'></script>
+
+    <!-- CSS -->
+	<link rel='stylesheet' type='text/css' href='css/html5reset-1.6.1.css' />
+	<link rel='stylesheet' type='text/css' href='style.css' />
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		
+	</script>
+
+	<!-- CSS -->
+	<link rel='stylesheet' type='text/css' href='css/html5reset-1.6.1.css' />
+	<link rel='stylesheet' type='text/css' href='style.css' />
+</head>
+
+<body class="about">
+	<header>
+		<a href="index.html" alt="logo">
+			<h1 class="header-logo"></h1>
+		</a>
+
+		<nav id="gloval-navigation">
+			<ul class="main-menue">
+				<li class="col_odd"><a href="index.html">TOP</a></li>
+				<li class="col_even active"><a href="#">ABOUT</a></li>
+				<li class="col_odd"><a href="#">PORTFOLIO</a></li>
+				<li class="col_even"><a href="#">CONTACT</a></li>
+			</ul>
+
+			<ul class="sns-menue">
+				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+
+		<div id="mobile-navigation">
+			<a id="sidr-button" class="menue-button" href="#sidr-nav">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<script type="text/javascript">
+			$(function(){
+			    $('#sidr-button').sidr({
+			      name: 'sidr',
+			      source:"#gloval-navigation",
+			      renaming: false,
+			      side : 'right',
+			      speed:350
+			    });
+			});
+		</script>
+	</header>
+	
+	<div class="wrap">		<!--  次項目(footer)が変な位置にくるのでdivでかます。-->	
+		<div class="page-head-container">
+			<div class = "page-index">
+				<h1>About</h1>
+			</div>
+
+			<div class="breadCrumb">
+				<a href="#">Top</a>
+				> 
+				<strong class="current">About</strong>
+			</div>
+		</div>
+
+		<main>
+			<div class="main-container">
+				<div class="about-container clearfix">
+					<div class="profile-block">
+						<div class="block-stud block-stud-left block-01-dark"></div>
+						<div class="block-stud block-stud-right block-01-dark"></div>
+						<div class="block-body-back block-01-light"></div>
+						<div class="block-body-front block-01-dark">
+							<h3>Profile</h3>
+							<dl>
+								<dt>Name ></dt>
+								<dd>Eriko Takashima</dd>
+								<dt>Gendar ></dt>
+								<dd>Female</dd>
+								<dt>Job ></dt>
+								<dd>System Enjineer</dd>
+								<dt>City ></dt>
+								<dd>Kyoto</dd>
+								<dt>Mail ></dt>
+								<dd>eriko0608rec@gmail.com</dd>
+								<dt>Site ></dt>
+								<dd>https://github.com/tks024/</dd>
+							</dl>
+						</div>
+					</div>
+
+					<div class="sns-block">
+						<div class="block-stud block-stud-left block-02-dark"></div>
+						<div class="block-stud block-stud-right block-02-dark"></div>
+						<div class="block-body-back block-02-light"></div>
+						<div class="block-body-front block-02-dark">
+							<h3>SNS</h3>
+							<dl>
+								<dt>Instgram ></dt>
+								<dd>--------</dd>
+								<dt>Twitter ></dt>
+								<dd>--------</dd>
+								<dt>Tumbler ></dt>
+								<dd>--------</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="hobby-block">
+						<div class="block-stud block-stud-left block-03-dark"></div>
+						<div class="block-stud block-stud-right block-03-dark"></div>
+						<div class="block-body-back block-03-light"></div>
+						<div class="block-body-front block-03-dark">
+							<h3>Hobby</h3>
+							<dl>
+								<dt>LEGO ></dt>
+								<dd>★★★★★</dd>
+								<dt>StopAnimation></dt>
+								<dd>★★</dd>
+								<dt>BaseBall ></dt>
+								<dd>★★★★</dd>
+								<dt>Cooking></dt>
+								<dd>★★</dd>
+								<dt>Shopping ></dt>
+								<dd>★★★★</dd>
+							</dl>
+						</div>
+					</div>
+
+				</div>
+
+				<script>
+					var ratio = 0.65;
+					$(function () {
+						func_adjustHeight(".profile-block",ratio);
+						func_adjustHeight(".sns-block",ratio);
+						func_adjustHeight(".hobby-block",ratio);
+					});
+					$(window).resize(function () {
+					   	func_adjustHeight(".profile-block",ratio);
+						func_adjustHeight(".sns-block",ratio);
+						func_adjustHeight(".hobby-block",ratio);
+					});
+				</script>
+			</div>
+		</main>
+
+		
+	</div>
+
+	<footer>
+		<h1 class="footer-logo"><img src="img/logo_foot.png" alt=""></h1>
+
+		<ul class="share-menue clearfix">
+			<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+		</ul>
+
+		<p class="rights-statement">
+			Copyright &copy; eTakashima all rights reserved.
+		</p>
+	</footer>
+
+</body>
+</html>

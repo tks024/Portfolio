@@ -94,6 +94,11 @@ header {
 	color:#fff;
 }
 
+.main-menue > .col_even.active a {
+	background-color: #123259;
+	color:#fff;
+}
+
 .sns-menue {
 	float:right;
 	list-style-type: none;
@@ -242,6 +247,12 @@ sidr
 	width: 100%;
 	height:100%;
 }
+
+/* -------------------------------------------------
+
+	Top
+
+------------------------------------------------- */
 
 .cd-fixed-bg {
 	position: relative;   
@@ -485,8 +496,6 @@ sidr
 	}
 }
 
-
-
 /*Stop Animation Video*/
 .video-container {
 	background-image: url("img/video-bg.png");
@@ -688,6 +697,206 @@ sidr
 	color: #000;
 }
 
+
+/* -------------------------------------------------
+
+page-head
+
+------------------------------------------------- */
+.page-head-container {
+	width: 100%;
+}
+
+.page-index {
+	height:80px;
+	width: 100%;
+}
+
+body.about .page-index {
+	background-color: #123259;
+}
+
+body.archive .page-index {
+	background-color: #18717A;
+}
+
+.page-index > h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	font-weight:600;
+	padding-left: 30px;
+	color: #fff;
+	line-height: 80px;
+	text-align: left;
+}
+.breadCrumb {
+	padding-left: 30px;
+	height: 60px;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 60px;
+}
+.breadCrumb > a {
+	text-decoration: none;
+	color: #000;
+}
+
+
+/* -------------------------------------------------
+
+	About
+
+------------------------------------------------- */
+.about-container {
+	width: 90%;
+	margin:0 5%;
+	padding-bottom: 50px;
+}
+
+.profile-block {
+	position: relative;
+	float: left;
+	top:0px;
+	margin:0px 10px;
+	max-width: 600px;
+	width: 100%;
+}
+
+
+.sns-block {
+	position: relative;
+	float: left;
+	top:195px;
+	margin:0 10px;
+	max-width: 300px;
+	width: 100%;
+}
+
+.hobby-block {
+	position: relative;
+	float: left;
+	top:97.5px;
+	margin:0 10px;
+	max-width: 450px;
+	width: 100%;
+}
+
+.block-stud {
+	position: absolute;
+	border-radius: 5px;
+	top:0px;
+	width: 20%;
+	height: 20%;
+	z-index: 10;
+	box-shadow:5px 5px 10px 0px #6b6b6b;
+}
+
+.block-stud-left {
+	left:10%;
+}
+
+.block-stud-right {
+	right:10%;
+}
+
+.block-body-back {
+	position: absolute;
+	border-radius: 3px;
+	top:8%;
+	left: 0px;
+	width: 100%;
+	height: 92%;
+	z-index: 15;
+	box-shadow:5px 5px 10px 0px #6b6b6b;
+}
+
+.block-body-front {
+	position: absolute;
+	border-radius: 3px;
+	top:11%;
+	left: 2%;
+	width: 98%;
+	height: 89%;
+	z-index: 20;
+}
+
+.block-01-dark{
+	background-color: #6089BF;
+}
+.block-01-light{
+	background-color: #6B97C6;
+}
+
+.block-02-dark{
+	background-color: #D6CEBD;
+}
+.block-02-light{
+	background-color: #DBD5CA;
+}
+
+.block-03-dark{
+	background-color: #3F5074;
+}
+.block-03-light{
+	background-color: #47597A;
+}
+
+.block-body-front > h3 {
+	font-family: 'Baloo Bhaina', cursive;
+	font-size:24px;
+	margin: 15px 15px;
+}
+
+.block-body-front dl {
+	margin: 15px 15px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:600;
+	color: #000;
+}
+
+.block-body-front dt {
+	float: left;
+	clear: both;
+    width: 130px;
+    padding:8px 5px;
+}
+
+.block-body-front dd {
+	float: left;
+	padding:8px 5px;
+}
+
+/* ########### 1580px以下 ########### */
+@media screen and (max-width: 1580px) {
+	.profile-block,.sns-block,.hobby-block{
+		float: none;
+	  	top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	    margin: 50px auto;
+	}
+}
+
+
+/* [PC]スクリーンが960px以上 */
+@media screen and (min-width: 960px) {
+	.block-body-front dl {
+		font-size: 16px;
+	}
+}
+/* [タブレット]スクリーンが600pxから959px  */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+	.block-body-front dl {
+		font-size: 14px;
+	}
+}
+/* [スマホ]スクリーンが599px以下 */
+@media screen and (max-width: 599px) {
+	.block-body-front dl {
+		font-size: 11px;
+	}
+}
 
 /* -------------------------------------------------
 
