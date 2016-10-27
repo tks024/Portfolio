@@ -233,7 +233,6 @@ sidr
 	font-size: 20px;
 }
 
-
 /* -------------------------------------------------
 
 	Main
@@ -347,7 +346,6 @@ sidr
 	font-family: 'Noto Sans Japanese', sans-serif;
 	font-weight:900;
 	font-size:14px;
-	/*padding-top:1vw;*/
 	text-align: center;
 }
 
@@ -700,7 +698,7 @@ sidr
 
 /* -------------------------------------------------
 
-page-head
+	Page-head
 
 ------------------------------------------------- */
 .page-head-container {
@@ -744,7 +742,7 @@ body.archive .page-index {
 
 /* -------------------------------------------------
 
-	About
+	About Page
 
 ------------------------------------------------- */
 .about-container {
@@ -900,7 +898,7 @@ body.archive .page-index {
 
 /* -------------------------------------------------
 
-portfoliopage
+	Portfolio Page
 
 ------------------------------------------------- */
 #portfolio-category {
@@ -953,18 +951,16 @@ portfoliopage
 	/*background-color: #ccc;*/
 }
 
-.grid {
+/*.grid {
 	position: relative;
-}
+}*/
 
 .grid_item {
     margin-bottom: 46px;
-    display: block;
 }
 
 .grid_item_img {
 	position: relative;
-	display: block;
 	width: 100%;
     max-width: 100%;
     height: auto;
@@ -979,7 +975,6 @@ portfoliopage
 	height: 100%;
 }
 
-
 .grid_item_img img {
 	position: absolute;
     display: block;
@@ -990,44 +985,80 @@ portfoliopage
 	height: 100%;
 }
 
-.grid_column_sizer {
-	width: 90px;
-}
-.grid_gutter_sizer {
-	width: 46px;
-}
-.grid_item_1col {
-	width: 162px;
-}
-.grid_item_2col {
-	width: 226px;
-}
-.grid_item_3col {
-	width: 362px;
-}
-
 .grid_item_text {
-	visibility: hidden;
 	margin-top: 8px;
 	text-align: center;
 	color: #000;
 }
 
-.grid_item:hover .grid_item_text {
-	visibility: visible;
-}
-
 .grid_item_text > h2 {
+	margin: 0;
 	font-family: 'Baloo Bhaina', cursive;
-	font-size:16px;
+	font-size:18px;
 	text-align: center;
 }
 
-.grid_item_text > h2 {
-	margin: 0;
+
+/* [PC]スクリーンが960px以上 */
+@media screen and (min-width: 960px) {
+	.grid { 
+		width: 100%;
+	}
+	.grid_item_1col {
+		width: 160px;
+	}
+	.grid_item_2col {
+		width: 240px;
+	}
+	.grid_item_3col {
+		width: 360px;
+	}	
+	.grid_column_sizer {
+		width: 90px;
+	}
+	.grid_gutter_sizer {
+		width: 46px;
+	}
+	.grid_item_text {
+		visibility: hidden;
+	}
+	.grid_item:hover .grid_item_text {
+		visibility: visible;
+	}
 }
+/* [タブレット]スクリーンが600pxから959px  */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+	.grid { 
+		max-width: 480px; 
+		margin: 0 auto; 
+	}
+	.grid_column_sizer, .grid_item_1col, .grid_item_2col, .grid_item_3col { 
+		width: 47%; 
+	}
 
-
+	.grid_gutter_sizer {
+		width: 6%;
+	}
+	.grid_item_text {
+		visibility: visible;
+	}
+}
+/* [スマホ]スクリーンが599px以下 */
+@media screen and (max-width: 599px) {
+	.grid {
+		max-width: 240px;
+		margin: 0 auto;
+	}
+	.grid_column_sizer, .grid_item_1col, .grid_item_2col, .grid_item_3col {
+		width: 100%;
+	}
+	.grid_gutter_sizer {
+		width: 0%;
+	}
+	.grid_item_text {
+		visibility: visible;
+	}
+}
 
 
 /* -------------------------------------------------

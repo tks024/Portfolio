@@ -28,7 +28,7 @@ function func_adjustFixedElement(fixedElement,mainElement) {
 	main = $(mainElement), 					//固定する要素を収める範囲
 	fixTop = fix.offset().top,
 	mainTop = main.offset().top,
-	h_fixHeight = $('header').css('position') === 'fixed' ? $('header').height() : 0,
+	h_fixHeight = $("header").css("position") === "fixed" ? $("header").height() : 0,
 	w = $(window);
 
 	// alert(h_fixHeight);
@@ -39,19 +39,19 @@ function func_adjustFixedElement(fixedElement,mainElement) {
 		winTop = w.scrollTop();
 		if(winTop + fixHeight > mainTop + mainHeight - h_fixHeight){
 			fix.css({
-				position: 'absolute',
+				position: "absolute",
 				top: mainHeight - fixHeight + h_fixHeight
 			});
 			// alert("hit");
 		}else if(winTop >= fixTop - h_fixHeight){
 			fix.css({
-				 position: 'fixed',
+				 position: "fixed",
 				 top: h_fixHeight
 		 });
 		 // alert("fixed");
 		}else{
 			fix.css({
-				 position: 'absolute',
+				 position: "absolute",
 				 top: fixTop
 			 });
 				// alert("absolute");
@@ -107,13 +107,13 @@ function func_animationSwing(elements) {
 	var anmSwing_00 = function (){
 		var randTarget = elements[Math.floor(Math.random() * elements.length)];
 		swgTarget = randTarget;
-		$(swgTarget).animate({rotate:'+=0.1deg'},1000,function(){anmSwing_01();});			
+		$(swgTarget).animate({rotate:"+=0.1deg"},1000,function(){anmSwing_01();});			
 	}
-	var anmSwing_01 = function (){$(swgTarget).animate({rotate:'+=8deg'},100,function(){anmSwing_02();});}
-	var anmSwing_02 = function (){$(swgTarget).animate({rotate:'-=8deg'},100,function(){anmSwing_03();});}
-	var anmSwing_03 = function (){$(swgTarget).animate({rotate:'+=8deg'},100,function(){anmSwing_04();});}
-	var anmSwing_04 = function (){$(swgTarget).animate({rotate:'-=8deg'},100,function(){anmSwing_05();});}
-	var anmSwing_05 = function (){$(swgTarget).animate({rotate:'0deg'},100,function(){anmSwing_00();});}
+	var anmSwing_01 = function (){$(swgTarget).animate({rotate:"+=8deg"},100,function(){anmSwing_02();});}
+	var anmSwing_02 = function (){$(swgTarget).animate({rotate:"-=8deg"},100,function(){anmSwing_03();});}
+	var anmSwing_03 = function (){$(swgTarget).animate({rotate:"+=8deg"},100,function(){anmSwing_04();});}
+	var anmSwing_04 = function (){$(swgTarget).animate({rotate:"-=8deg"},100,function(){anmSwing_05();});}
+	var anmSwing_05 = function (){$(swgTarget).animate({rotate:"0deg"},100,function(){anmSwing_00();});}
 	
 	//アニメーション実行
 	anmSwing_00();
@@ -160,7 +160,7 @@ function func_animationFall(element) {
         //横幅範囲内でランダム値を取得
         var randX= Math.ceil(Math.random()*stageWidth);
         //名前(ID)
-        var flakeName = 'flake-'+randX;
+        var flakeName = "flake-"+randX;
         //x座標,Y座標
         var entryLeft = randX;
         var entryTop = "-50px";
@@ -171,24 +171,24 @@ function func_animationFall(element) {
         var randFontSize = Math.ceil(Math.random()*50);
         var flakeSize = randFontSize;
         //カラー
-        var colors = ['#fff','#6089BF','#D7A827'];
+        var colors = ["#fff","#6089BF","#D7A827"];
         var hue = colors[Math.floor(Math.random() * colors.length)];
         //文字
-        var letters = ['0','1'];
+        var letters = ["0","1"];
         var letter = letters[Math.floor(Math.random() * letters.length)];
 
         //要素を降らす
         var flake = document.createElement("div");
         $(flake).attr({
-        	'id': flakeName,
-        	'class': 'fontFlake'
+        	"id": flakeName,
+        	"class": "fontFlake"
      	})
      	.css({
-     		'top': entryTop,
-        	'left': entryLeft,
-        	'font-family':'Baloo Bhaina',
-        	'font-size': flakeSize,
-        	'color': hue
+     		"top": entryTop,
+        	"left": entryLeft,
+        	"font-family":"Baloo Bhaina",
+        	"font-size": flakeSize,
+        	"color": hue
         })
         .text(letter)
         .appendTo(element)
@@ -199,7 +199,7 @@ function func_animationFall(element) {
         	},
             8000,
             function() {
-            	$('#'+flakeName).remove();                      
+            	$("#"+flakeName).remove();                      
     		}
         );
 	}
@@ -223,8 +223,8 @@ func_animationFactory--ファクトリーラインアニメーション
 ------------------------------------------------- */
 function func_animationFactory() {
 	//工場ラインフレームアニメーション
-	var srcs = ['img/factory01.png','img/factory02.png'];
-	func_animationFrame('#line_item img',srcs,250);
+	var srcs = ["img/factory01.png","img/factory02.png"];
+	func_animationFrame("#line_item img",srcs,250);
 	//ブロック移動アニメーション
 	func_animationBrick(20000,10000);
 }
@@ -252,26 +252,26 @@ function func_animationBrick(duration,interval) {
 		//カウント
 		i += 1;
 		//ブロック要素追加
-		var brickName = 'brick-item-'+ i;
-		var imgSource = 'img/lg_0' + i + '.png';
+		var brickName = "brick-item-"+ i;
+		var imgSource = "img/lg_0" + i + ".png";
 		var brick = document.createElement("div");
 
 		$(brick)
 		.attr({
-			'id': brickName,
-			'class': 'brick'
+			"id": brickName,
+			"class": "brick"
 		})
-		.appendTo('#factory');
+		.appendTo("#factory");
 
 		var brickimg = document.createElement("img");
 		$(brickimg)
 		.attr({
-			'src': imgSource
+			"src": imgSource
 		})
 		.appendTo(brick);
 
 		$(brick).css({
-			display:'block',
+			display:"block",
 			top:"0",
 			left:"85%"
 		});
@@ -284,7 +284,7 @@ function func_animationBrick(duration,interval) {
 			"linear",
 			function(){
 				$(brick).stop().animate(
-					{opacity: '0.5'},
+					{opacity: "0.5"},
 					50,
 					function(){
 						$(brick).remove();
