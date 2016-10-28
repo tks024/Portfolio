@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>About</title>
+	<title>Contact</title>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
@@ -17,7 +17,6 @@
 	<script type="text/javascript" src="js/jquery.easie.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<script type="text/javascript" src="js/jquery.sidr.min.js"></script>
-	<script src="https://snapwidget.com/js/snapwidget.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 
     <!-- CSS -->
@@ -27,7 +26,7 @@
 
 </head>
 
-<body class="single-postabout">
+<body class="single-postcontact">
 	<header>
 		<a href="index.html" alt="logo">
 			<h1 class="header-logo"></h1>
@@ -36,9 +35,9 @@
 		<nav id="gloval-navigation">
 			<ul class="main-menue">
 				<li class="col_odd"><a href="index.html">TOP</a></li>
-				<li class="col_even current-menu-item"><a href="#">ABOUT</a></li>
+				<li class="col_even"><a href="about.html">ABOUT</a></li>
 				<li class="col_odd"><a href="archive.html">PORTFOLIO</a></li>
-				<li class="col_even"><a href="contact.html">CONTACT</a></li>
+				<li class="col_even current-menu-item"><a href="#">CONTACT</a></li>
 			</ul>
 
 			<ul class="sns-menue">
@@ -70,98 +69,58 @@
 	<div class="wrap">		<!--  次項目(footer)が変な位置にくるのでdivでかます。-->	
 		<div class="page-head-container">
 			<div class = "page-index">
-				<h1>About</h1>
+				<h1>Contact</h1>
 			</div>
 
 			<div class="breadCrumb">
 				<a href="index.html">Top</a>
 				> 
-				<strong class="current">About</strong>
+				<strong class="current">Contact</strong>
 			</div>
 		</div>
 
 		<main>
 			<div class="main-container">
-				<div class="about-container clearfix">
-					<div class="profile-block">
-						<div class="block-stud block-stud-left block-01-dark"></div>
-						<div class="block-stud block-stud-right block-01-dark"></div>
-						<div class="block-body-back block-01-light"></div>
-						<div class="block-body-front block-01-dark">
-							<h3>Profile</h3>
-							<dl>
-								<dt>Name &gt;</dt>
-								<dd>Eriko Takashima</dd>
-								<dt>Gendar &gt;</dt>
-								<dd>Female</dd>
-								<dt>Job &gt;</dt>
-								<dd>System Enjineer</dd>
-								<dt>City &gt;</dt>
-								<dd>Kyoto</dd>
-								<dt>Mail &gt;</dt>
-								<dd>eriko0608rec@gmail.com</dd>
-								<dt>Site &gt;</dt>
-								<dd>https://github.com/tks024/</dd>
-							</dl>
-						</div>
-					</div>
+				<div class="contact-container">
+					<form action="" method="post">
+						<table class="form_table">
+							<tbody>
+								<tr>
+									<th class="title">Name<em>*</em></th>
+									<td>
+										<span>
+											<input type="text" name="text-name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="yamada taro" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th class="title">E-Mail <em>*</em></th>
+									<td>
+										<span>
+											<input type="email" name="text-email" value="" size="40" aria-required="true" aria-invalid="false" placeholder="contact@example.com" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th class="title">Content <em>*</em></th>
+									<td>
+										<span>
+											<textarea name="textarea-content" cols="40" rows="10" aria-required="true" aria-invalid="false" placeholder="Please input..."></textarea>
+										</span>
+									</td>
+								</tr>
 
-					<div class="sns-block">
-						<div class="block-stud block-stud-left block-02-dark"></div>
-						<div class="block-stud block-stud-right block-02-dark"></div>
-						<div class="block-body-back block-02-light"></div>
-						<div class="block-body-front block-02-dark">
-							<h3>SNS</h3>
-							<dl>
-								<dt>Instgram &gt;</dt>
-								<dd>--------</dd>
-								<dt>Twitter &gt;</dt>
-								<dd>--------</dd>
-								<dt>Tumbler &gt;</dt>
-								<dd>--------</dd>
-							</dl>
-						</div>
-					</div>
-					<div class="hobby-block">
-						<div class="block-stud block-stud-left block-03-dark"></div>
-						<div class="block-stud block-stud-right block-03-dark"></div>
-						<div class="block-body-back block-03-light"></div>
-						<div class="block-body-front block-03-dark">
-							<h3>Hobby</h3>
-							<dl>
-								<dt>LEGO &gt;</dt>
-								<dd>★★★★★</dd>
-								<dt>StopAnimation&gt;</dt>
-								<dd>★★</dd>
-								<dt>BaseBall &gt;</dt>
-								<dd>★★★★</dd>
-								<dt>Cooking&gt;</dt>
-								<dd>★★</dd>
-								<dt>Shopping &gt;</dt>
-								<dd>★★★★</dd>
-							</dl>
-						</div>
-					</div>
-
+								<tr>
+									<td colspan="2">
+										<input class="job_submit" type="submit" value="Send" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
 				</div>
-
-				<script>
-					var ratio = 0.65;
-					$(function () {
-						func_adjustHeight(".profile-block",ratio);
-						func_adjustHeight(".sns-block",ratio);
-						func_adjustHeight(".hobby-block",ratio);
-					});
-					$(window).resize(function () {
-					   	func_adjustHeight(".profile-block",ratio);
-						func_adjustHeight(".sns-block",ratio);
-						func_adjustHeight(".hobby-block",ratio);
-					});
-				</script>
 			</div>
-		</main>
-
-		
+		</main>		
 	</div>
 
 	<footer>
